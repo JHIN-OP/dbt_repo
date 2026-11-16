@@ -1,0 +1,47 @@
+version: 2
+
+sources:
+  - name: cmx_staging
+    description: >
+      Second-hand-car staging tables in Snowflake,
+      loaded from MSSQL through the ingestion pipeline.
+
+    database: DQLABS
+    schema: CMX_STAGING
+
+    config:
+      meta:
+        prizm_pipeline: DBT_SECOND_HAND_CAR_STAGING_TO_CONSUMPTION
+        prizm_platform: SNOWFLAKE
+        prizm_database: DQLABS
+        prizm_schema: CMX_STAGING
+        prizm_layer: STAGING
+        prizm_orchestrator: DBT_CLOUD
+
+    tables:
+      - name: stg_customers
+        identifier: STG_CUSTOMERS
+        description: "Customer staging records."
+
+        config:
+          meta:
+            prizm_asset_group: CUSTOMER
+            prizm_physical_asset: DQLABS.CMX_STAGING.STG_CUSTOMERS
+
+      - name: stg_car_inventory
+        identifier: STG_CAR_INVENTORY
+        description: "Car inventory staging records."
+
+        config:
+          meta:
+            prizm_asset_group: CAR_INVENTORY
+            prizm_physical_asset: DQLABS.CMX_STAGING.STG_CAR_INVENTORY
+
+      - name: stg_sales_transaction
+        identifier: STG_SALES_TRANSACTION
+        description: "Sales transaction staging records."
+
+        config:
+          meta:
+            prizm_asset_group: CAR_SALES
+            prizm_physical_asset: DQLABS.CMX_STAGING.STG_SALES_TRANSACTION
