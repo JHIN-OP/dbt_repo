@@ -19,9 +19,8 @@ clean-targets:
 
 models:
   second_hand_car_snowflake:
-    +database: DQLABS
-
     consumption:
+      +database: DQLABS
       +materialized: incremental
       +incremental_strategy: merge
       +on_schema_change: fail
