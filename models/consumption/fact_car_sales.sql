@@ -3,7 +3,7 @@
         materialized='incremental',
         incremental_strategy='merge',
         unique_key='SALE_ID',
-        on_schema_change='fail',
+        on_schema_change='append_new_columns',
         alias='FACT_CAR_SALES',
 
         query_tag=generate_prizm_query_tag(
