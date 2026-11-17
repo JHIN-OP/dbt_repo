@@ -3,7 +3,7 @@
         materialized='incremental',
         incremental_strategy='merge',
         unique_key='CUSTOMER_ID',
-        on_schema_change='fail',
+        on_schema_change='append_new_columns',
         alias='DIM_CUSTOMER',
 
         query_tag=generate_prizm_query_tag(
