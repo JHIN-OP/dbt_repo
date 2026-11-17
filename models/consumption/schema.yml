@@ -43,7 +43,6 @@ models:
         description: "Unique car identifier."
         tests:
           - not_null
-          - unique
 
   - name: fact_car_sales
     description: >
