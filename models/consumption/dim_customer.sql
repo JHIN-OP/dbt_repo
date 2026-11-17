@@ -9,7 +9,7 @@
         query_tag=generate_prizm_query_tag(
             model_name='DIM_CUSTOMER',
             source_table='DQLABS.CMX_STAGING.STG_CUSTOMERS',
-            target_table='DQLABS.CMX_CONSUMPTION.DIM_CUSTOMER',
+            target_table='DQLABS.CMX_CONSUMPTION.DIM_CUSTOMERS',
             asset_group='CUSTOMER',
             operation='INCREMENTAL_INSERT_NEW'
         ),
