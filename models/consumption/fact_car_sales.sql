@@ -8,7 +8,7 @@
 
         query_tag=generate_prizm_query_tag(
             model_name='FACT_CAR_SALES',
-            source_table='DQLABS.CMX_STAGING.STG_SALES_TRANSACTION',
+            source_table='DQLABS.CMX_STAGING.STG_SALES_TRANSACTIONS',
             target_table='DQLABS.CMX_CONSUMPTION.FACT_CAR_SALES',
             asset_group='CAR_SALES',
             operation='INCREMENTAL_INSERT_NEW'
@@ -37,7 +37,7 @@ with source_records as (
     from {{
         source(
             'cmx_staging',
-            'stg_sales_transaction'
+            'stg_sales_transactions'
         )
     }} as src
 
