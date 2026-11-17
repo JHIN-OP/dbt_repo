@@ -48,14 +48,14 @@ models:
   - name: fact_car_sales
     description: >
       Car-sales fact table loaded incrementally from
-      DQLABS.CMX_STAGING.STG_SALES_TRANSACTION.
+      DQLABS.CMX_STAGING.STG_SALES_TRANSACTIONS.
 
     config:
       meta:
         prizm_pipeline: DBT_SECOND_HAND_CAR_STAGING_TO_CONSUMPTION
         prizm_asset_group: CAR_SALES
         prizm_operation: INCREMENTAL_INSERT_NEW
-        prizm_source: DQLABS.CMX_STAGING.STG_SALES_TRANSACTION
+        prizm_source: DQLABS.CMX_STAGING.STG_SALES_TRANSACTIONS
         prizm_target: DQLABS.CMX_CONSUMPTION.FACT_CAR_SALES
         prizm_orchestrator: DBT_CLOUD
         prizm_platform: SNOWFLAKE
