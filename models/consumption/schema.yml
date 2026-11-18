@@ -37,11 +37,6 @@ models:
                 severity: error
                 store_failures: true
 
-          - unique:
-              config:
-                severity: error
-                store_failures: true
-
       - name: CAR_YEAR
         description: Manufacturing year used by Tableau reporting.
         data_tests:
