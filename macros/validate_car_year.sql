@@ -10,7 +10,7 @@
                 COUNT_IF(CAR_YEAR IS NULL) AS NULL_CAR_YEAR_COUNT,
 
                 COUNT_IF(
-                    CAR_YEAR < 2021
+                    CAR_YEAR < 1980
                     OR CAR_YEAR > YEAR(CURRENT_DATE()) + 1
                 ) AS INVALID_CAR_YEAR_COUNT
 
